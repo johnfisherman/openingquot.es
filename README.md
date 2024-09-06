@@ -2,7 +2,7 @@
 _Unearthing mankind's best quotes, one epigraph at a time_
 
 This webapp is being developed by me, [Fred Rocha](https://fredrocha.net/), in public. You can tag along
-for the adventure [https://fredrocha.net/2024/08/07/building-a-crud-application-using-ruby-on-rails-in-2024/](here).
+for the adventure [here](https://fredrocha.net/2024/08/07/building-a-crud-application-using-ruby-on-rails-in-2024/).
 
 Some novelists choose to open their books with a quote from another writer. This is called an [epigraph](https://en.wikipedia.org/wiki/Epigraph_(literature)). These quotes 
 taken out of their original context are given a new life, necessarily detached from the former one. Since writers are 
