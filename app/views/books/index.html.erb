@@ -1,2 +1,10 @@
 <h1>Books</h1>
 <p>The finest books by selected authors</p>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %> (<%= book.year %>)
+    </li>
+  <% end %>
+</ul>
