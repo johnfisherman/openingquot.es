@@ -1,0 +1,10 @@
+<h1>Authors</h1>
+<p>The finest authors in town. They have quoted, and they have been quoted.</p>
+
+<ul>
+  <% @authors.each do |author| %>
+    <li>
+      <%= link_to author.name, author %>
+    </li>
+  <% end %>
+</ul>

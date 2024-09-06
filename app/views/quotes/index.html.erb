@@ -1,0 +1,10 @@
+<h1>Quotes</h1>
+<p>The finest quotes. Just look at'em.</p>
+
+<ul>
+  <% @quotes.each do |quote| %>
+    <li>
+      <%= link_to quote.body, quote %>
+    </li>
+  <% end %>
+</ul>

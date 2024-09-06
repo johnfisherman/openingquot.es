@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   root "books#index"
 
   resources :books
-
-  # get "authors", to: "authors#index"
+  resources :authors
+  resources :quotes
 
   get "up" => "rails/health#show", as: :rails_health_check
 
