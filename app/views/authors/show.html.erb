@@ -4,9 +4,7 @@
 <ul>
     <% @author_books.each do |book| %>
         <li>
-
             <%= link_to book.title, book %> (<%= book.year %>)
-
         </li>
     <% end %>
 </ul>
