@@ -1,2 +1,12 @@
 <h1><%= @author.name %></h1>
-<h2>This person wrote books. With quotes and quotable quotes, maybe.</h2>
+<h2>This person wrote books.</h2>
+
+<ul>
+    <% @author_books.each do |book| %>
+        <li>
+
+            <%= link_to book.title, book %> (<%= book.year %>)
+
+        </li>
+    <% end %>
+</ul>
