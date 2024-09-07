@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_07_111353) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_07_114140) do
   create_table "authors", force: :cascade do |t|
     t.string "name"
-    t.integer "book_id", null: false
+    t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quote_id"
