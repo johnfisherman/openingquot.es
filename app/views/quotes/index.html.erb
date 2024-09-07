@@ -4,7 +4,7 @@
 <ul>
   <% @quotes.each do |quote| %>
     <li>
-      <%= link_to quote.body, quote %>
+      "<%= link_to quote.body, quote %>" — <%= quote.quote_author.name %>
     </li>
   <% end %>
 </ul>

@@ -14,4 +14,5 @@ class QuotesController < ApplicationController
         # The writer that decided to quote that other author, and that has written the book with this epigraph
         @parent_book_author = Author.find(@parent_book.author_id)
     end
+    
 end
