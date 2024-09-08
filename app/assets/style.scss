@@ -14,6 +14,13 @@ $medium-gray: #b2b2b2;
 $light-gray: #f8f8f8;
 
 
+@mixin structure() {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 40px;
+
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -23,20 +30,24 @@ header {
 
     #header-content {
         /* border: 2px solid red; */
-    
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 10px 40px;
+        @include structure();
+
         display: flex;
         justify-content: space-between;
+        align-items: center;
         
         #main-navigation {
             ul {
                 list-style: none;
                 display: flex;
+                align-items: center;
+                margin: 0;
+
                 li {
                     list-style: none;
                     padding-left: 20px;
+                    margin: 0;
+
                     a {
                     }
                 }
@@ -46,8 +57,21 @@ header {
 }
 
 #body-content {
-    padding: 10px 40px;
-    /* border: 2px solid red; */
-    max-width: 1140px;
+    // border: 2px solid $debug-color-1;
+
+    @include structure();
+
+    min-height: 600px;
     margin: 0 auto;
+}
+
+#footer-content {
+    // border: 2px solid $debug-color-1;
+
+    display: flex;
+    @include structure();
+
+    #footer-logo {
+        margin-right: 20px;
+    }
 }
