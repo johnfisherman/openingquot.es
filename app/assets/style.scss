@@ -1,0 +1,53 @@
+$debug-color-1: #01d28e;
+$debug-color-2: #730068;
+$debug-color-3: #a89cc8;
+$debug-color-4: lime;
+$debug-color-5: teal;
+
+$oq-main-color: black;
+$oq-secondary-color: white;
+$oq-tertiary-color: #9b51e0;
+$oq-accent-color: #ec524b;
+
+$dark-gray: #313131;
+$medium-gray: #b2b2b2;
+$light-gray: #f8f8f8;
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+header {
+    /* border: 2px solid lime; */
+
+    #header-content {
+        /* border: 2px solid red; */
+    
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 10px 40px;
+        display: flex;
+        justify-content: space-between;
+        
+        #main-navigation {
+            ul {
+                list-style: none;
+                display: flex;
+                li {
+                    list-style: none;
+                    padding-left: 20px;
+                    a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+#body-content {
+    padding: 10px 40px;
+    /* border: 2px solid red; */
+    max-width: 1140px;
+    margin: 0 auto;
+}

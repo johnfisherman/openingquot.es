@@ -10,3 +10,11 @@ the utmost specialists in their fields, and since the beginning of a work has su
 that these selected quotes will necessarily be the crème de la crème of the world’s literature. Change my mind.
 
 This website / webapp will be a repository for those epigraphs. Send your own favorites.
+
+## Running the project
+
+### Compiling SASS styles
+
+Run this command from the root of the project:
+
+`sass --watch app/assets/style.scss:app/assets/stylesheets/style.css`

@@ -14,10 +14,30 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "pico.min" %>
+
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div id="header-content">
+        <div id="header-logo">
+          <a href="/">openingquotes.com</a>
+        </div>
+        <div id="main-navigation">
+          <ul>
+            <li><a href="/quotes">Quotes</a></li>
+            <li><a href="/authors">Authors</a></li>
+            <li><a href="/books">Books</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="body-content">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
