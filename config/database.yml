@@ -5,12 +5,13 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
+  adapter: sqlite3
   database: storage/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -29,4 +30,6 @@ test:
 # ensure the database is located in a persisted volume.
 production:
   <<: *default
-  # database: path/to/persistent/storage/production.sqlite3
+  database: opening_quotes
+  username: opening_quotes
+  password: <%= ENV['OPENING_QUOTES_DATABASE_PASSWORD'] %>

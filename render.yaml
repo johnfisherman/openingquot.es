@@ -1,0 +1,20 @@
+databases:
+  - name: opening_quotes
+    databaseName: opening_quotes
+    user: opening_quotes
+    plan: free
+
+services:
+  - type: web
+    plan: free
+    name: opening_quotes
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: opening_quotes
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
