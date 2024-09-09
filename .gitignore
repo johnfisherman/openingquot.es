@@ -40,3 +40,5 @@
 # Ignore compiled CSS files
 app/assets/stylesheets/style.css
 app/assets/stylesheets/style.css.map
+/app/assets/builds/*
+!/app/assets/builds/.keep
