@@ -18,7 +18,4 @@ This website / webapp will be a repository for those epigraphs. Send your own fa
 ### Dev
 Run this command from the root of the project:
 
-`sass --watch app/assets/style.scss:app/assets/stylesheets/style.css`
-
-### Prod
-`sass app/assets/style.scss:app/assets/stylesheets/style.css --style compressed`
+./bin/dev
