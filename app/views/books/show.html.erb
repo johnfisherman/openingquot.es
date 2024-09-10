@@ -1,2 +1,2 @@
-<h1><%= @book.title %></h1>
-<h2>This book dates from <%= @book.year %></h2>
+<h1><%= @book.title %> (<%= @book.year %>)</h1>
+<h2><%= link_to @author.name, @author %></h2>
