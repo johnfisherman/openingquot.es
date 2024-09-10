@@ -4,8 +4,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    Rails.logger.info 'Single book'
-
     @book = Book.find(params[:id])
     @author = Author.find(@book.author_id)
     @quote = Quote.find_by(book_id: @book.id)
