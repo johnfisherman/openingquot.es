@@ -3,8 +3,8 @@ module Hasquotes
 
   #Does this book open with a quote?
   def has_quote?
-    @quote = Quote.where(book_id: id).first
-    if @quote.nil? || @quote.body.empty?
+    @quote = Quote.find_by(book_id: id)
+    if @quote.nil? || @quote.body.blank?
       return false
     else 
       return true
