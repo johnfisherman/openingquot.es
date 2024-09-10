@@ -1,7 +1,9 @@
 class Book < ApplicationRecord
-    # has_many :authors
+    include Hasquotes
+
     belongs_to :author
     has_many :quotes
 
     validates :title, presence: true
+
 end

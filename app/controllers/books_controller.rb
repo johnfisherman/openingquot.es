@@ -4,7 +4,13 @@ class BooksController < ApplicationController
   end
 
   def show
+    Rails.logger.info 'Single book'
+
     @book = Book.find(params[:id])
-    @author = Author.find_by(id: @book.author_id)
+    @author = Author.find(@book.author_id)
+    @quote = Quote.find_by(book_id: @book.id)
+    if @book.has_quote?
+      @quote_author = Author.find(@quote.author_id)
+    end
   end
 end

@@ -1,2 +1,5 @@
 <h1><%= @book.title %> (<%= @book.year %>)</h1>
 <h2><%= link_to @author.name, @author %></h2>
+<% if @book.has_quote? %>
+    <h2>"<%= link_to @quote.body, @quote %>" - <%= link_to @quote_author.name, @quote_author %></h2>
+<% end %>
