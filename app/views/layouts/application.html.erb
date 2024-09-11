@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <title><%= content_for(:title) || "Opening Quotes — Unearthing mankind's best quotes, one epigraph at a time." %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta property="og:description" content="Unearthing mankind's best quotes, one epigraph at a time." />
+    <meta property="og:url" content="https://openingquot.es/" />
+    <meta property="og:site_name" content="Opening Quotes" />
+    <meta property="article:publisher" content="https://fredrocha.net" />
+    <meta property="og:image" content="assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" /> 
 
     <%= yield :head %>
 
@@ -31,7 +41,15 @@
     <header>
       <div id="header-content">
         <div id="header-logo">
-          <a href="/">Opening Quotes</a>
+          <a href="/">
+          <svg viewBox="-1.6 -1.6 19.20 19.20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0">
+             <rect x="-1.6" y="-1.6" width="19.20" height="19.20" rx="0" fill="#000000" strokewidth="0"/>
+            </g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="SVGRepo_iconCarrier"> <path d="M7 10.4142L2.70711 14.7071L1.29289 13.2929L5 9.58579V9L1 9V2H7V10.4142Z" fill="#000000"/> <path d="M9 9L13 9V9.58579L9.29289 13.2929L10.7071 14.7071L15 10.4142L15 2H9L9 9Z" fill="#000000"/> </g>
+          </svg>
+          </a>
         </div>
         <div id="main-navigation">
           <ul>
@@ -46,7 +64,7 @@
     <div id="body-content">
       <%= yield %>
     </div>
-    <footer>
+    <footer data-theme="dark">
       <div id="footer-content">
         <div id="footer-logo">
           <a href="/">Opening Quotes</a>
