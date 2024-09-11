@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Openingquotes Com" %></title>
+    <title><%= content_for(:title) || "Opening Quotes — Unearthing mankind's best quotes, one epigraph at a time." %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -20,7 +20,8 @@
 
     <%= javascript_importmap_tags %>
 
-    <script defer data-domain="openingquotes.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+    <!-- Plausible Analytics -->
+    <script defer data-domain="openingquot.es" src="https://plausible.io/js/script.outbound-links.js"></script>
     <script>
       window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
     </script>
@@ -30,13 +31,14 @@
     <header>
       <div id="header-content">
         <div id="header-logo">
-          <a href="/">openingquotes.com</a>
+          <a href="/">Opening Quotes</a>
         </div>
         <div id="main-navigation">
           <ul>
             <li><a href="/quotes">Quotes</a></li>
             <li><a href="/authors">Authors</a></li>
             <li><a href="/books">Books</a></li>
+            <li><a href="/about">About</a></li>
           </ul>
         </div>
       </div>
@@ -47,7 +49,7 @@
     <footer>
       <div id="footer-content">
         <div id="footer-logo">
-          <a href="/">openingquotes.com</a>
+          <a href="/">Opening Quotes</a>
         </div>
         <div>
           <p>Unearthing mankind's best quotes, one epigraph at a time. A <a href="https://fredrocha.net" target="_blank">Fred Rocha</a> creative endeavour. The development process is being documented <a href="https://fredrocha.net/2024/08/07/building-a-crud-application-using-ruby-on-rails-in-2024/" target="_blank">here</a>.</p>
