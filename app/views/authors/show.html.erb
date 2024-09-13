@@ -1,6 +1,8 @@
 <h1><%= @author.name %></h1>
-<h2>We have <%= @author_books.length %> books written by this person containing epigraphs.</h2>
-<h2>This author was quoted <%= @quoted_quotes.length %> times in epigraphs.</h2>
+
+<% unless @author_books.length <= 0 %>
+    <h2>We have <%= @author_books.length %> books written by this person containing epigraphs.</h2>
+<% end %>
 
 <ul>
     <% @author_books.each do |book| %>
@@ -9,3 +11,12 @@
         </li>
     <% end %>
 </ul>
+
+<% unless @quoted_quotes.length <= 0 %>
+    <h2>This author was quoted <%= @quoted_quotes.length %> times in epigraphs.</h2>
+    <% @quoted_quotes.each do |quote| %>
+        <li>
+            <%= link_to quote.body, quote %>
+        </li>
+    <% end %>
+<% end %>
