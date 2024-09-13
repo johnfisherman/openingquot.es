@@ -92,6 +92,11 @@ body {
 
             margin: 0;
 
+            &.active {
+              text-decoration: underline;
+              text-decoration-color: white;
+            }
+
             a {
               color: white;
             }
