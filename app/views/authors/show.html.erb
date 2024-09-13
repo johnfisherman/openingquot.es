@@ -1,5 +1,6 @@
 <h1><%= @author.name %></h1>
-<h2>This person wrote books.</h2>
+<h2>We have <%= @author_books.length %> books written by this person containing epigraphs.</h2>
+<h2>This author was quoted <%= @quoted_quotes.length %> times in epigraphs.</h2>
 
 <ul>
     <% @author_books.each do |book| %>
