@@ -123,6 +123,7 @@ body {
   }
 
   footer {
+    margin-top: 40px;
     background-color: black;
     #footer-content {
       display: flex;
@@ -157,4 +158,11 @@ p.quote-body {
 
 #see-more-quotes {
   margin-top: 80px;
+}
+
+// Books#show — ripe for factorization
+h2 {
+  a {
+    color: black;
+  }
 }

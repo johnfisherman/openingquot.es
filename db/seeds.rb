@@ -9,7 +9,7 @@
 #   end
 
 # Populate Authors
-[ "Ernest Hemingway", "Gertrude Stein", "Hunter S. Thompson", "Samuel Johnson", "Ray Bradbury", "Juan Ramón Jiménez", "Arundathi Roy", "John Berger", "Justin Torres", "Plato", "Vladimir Nabokov", "James Boswell", "Chang-rae Lee", "Thomas Mann", "Graham Greene", "James Hardy" ].each do |author_name|
+[ "Ernest Hemingway", "Gertrude Stein", "Hunter S. Thompson", "Samuel Johnson", "Ray Bradbury", "Juan Ramón Jiménez", "Arundathi Roy", "John Berger", "Justin Torres", "Plato", "Vladimir Nabokov", "James Boswell", "Chang-rae Lee", "Thomas Mann", "Graham Greene", "James Hardy", "Dawn O'Porter" ].each do |author_name|
     Author.find_or_create_by!(name: author_name)
 end
 
@@ -22,6 +22,7 @@ Book.new(title: "We the Animals", year: 2011, author_id: 9).save
 Book.new(title: "Pale Fire", year: 1962, author_id: 11).save
 Book.new(title: "My Year Abroad", year: 2021, author_id: 13).save
 Book.new(title: "The Comedians", year: 1966, author_id: 15).save
+Book.new(title: "So Lucky", year: 2020, author_id: 17).save
 
 # Populate Quotes
 Quote.new(body: "You are all a lost generation.", book_id: 1, author_id: 2).save
@@ -32,3 +33,4 @@ Quote.new(body: "Now a boy is of all wild beasts the most difficult to manage. F
 Quote.new(body: "This reminds me of the ludicrous account he gave Mr. Langton, of the despicable state of a young gentleman of good family. 'sir, when I heard of him last, he was running about town shooting cats.' And then in a sort of kindly reverie, he bethought himself of his own favorite cat, and said, 'But Hodge shan't be shot: no, no, Hodge shall not be shot.", book_id: 6, author_id: 12).save
 Quote.new(body: "He who truly loves the world\nshapes \r\nhimself to please it.", book_id: 7, author_id: 14).save
 Quote.new(body: "Aspects are within us\r\nand who seems\r\nMost kingly is the King.", book_id: 8, author_id: 16).save
+Quote.new(body: "Luck: Success or failure apparently brought by chance rather than through one's own actions.", book_id: 9, author_id: 17).save

@@ -3,6 +3,6 @@
 <% if @book.has_quote? %>
     <br/>
     <p>This book opens with the epigraph:
-    <h2>"<%= link_to @quote.body, @quote %>"</h2>
+    <h2>"<%= link_to simple_format(@quote.body, class: 'quote-body', wrapper_tag: "div"), @quote %>"</h2>
     <p>— <%= link_to @quote_author.name, @quote_author %>.
 <% end %>
