@@ -14,90 +14,111 @@ $dark-gray: #313131;
 $medium-gray: #b2b2b2;
 $light-gray: #f8f8f8;
 
+$medium-breakpoint: 540px;
+
 :root {
-    --pico-font-family-sans-serif: Helvetica, Arial, "Helvetica Neue", sans-serif;
-    --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
-    --pico-font-family: var(--pico-font-family-sans-serif);
+  --pico-font-family-sans-serif: Helvetica, Arial, "Helvetica Neue", sans-serif;
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
+  --pico-font-family: var(--pico-font-family-sans-serif);
 }
 
 @mixin structure() {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 10px 40px;
-
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 10px 40px;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-    body {
-    header {
-        background-color: black;
-        padding-block: 10px;
-        margin-bottom: 40px;
+body {
+  header {
+    background-color: black;
+    padding-block: 10px;
+    margin-bottom: 40px;
 
-        #header-content {
-            @include structure();
+    #header-content {
+      @include structure();
 
-            padding: 0px 40px;
+      padding: 0px 40px;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            // border: 2px solid lavender;
-            
-            #header-logo {
+      display: flex;
+      // Mobile
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      // border: 2px solid lavender;
 
-                svg {
-                    max-width: 100px;
-                    width: 100px;
-                    height: 100px;  
-                }
-            }
-            #main-navigation {
-                ul {
-                    list-style: none;
-                    display: flex;
-                    align-items: center;
-                    margin: 0;
-
-                    li {
-                        list-style: none;
-                        padding-left: 20px;
-                        margin: 0;
-
-                        a {
-                            color: white;
-                        }
-                    }
-                }
-            }
+      #header-logo {
+        margin-bottom: 7px;
+        svg {
+          width: 70px;
+          height: 70px;
         }
-    }
+      }
 
-    #body-content {
-        // border: 2px solid $debug-color-1;
+      @media screen and (min-width: $medium-breakpoint) {
+        flex-direction: row;
 
-        @include structure();
-
-        min-height: 600px;
-        margin: 0 auto;
-
-        font-family: serif;
-    }
-
-    footer {
-        background-color: black;
-        #footer-content {
-            // border: 2px solid $debug-color-1;
-
-            display: flex;
-            @include structure();
-
-            #footer-logo {
-                margin-right: 20px;
-            }
+        #header-logo {
+          margin-bottom: 0px;
+          svg {
+            width: 90px;
+            height: 90px;
+          }
         }
+      }
+
+      #main-navigation {
+        ul {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+
+          li {
+            list-style: none;
+            padding: 0 10px;
+            @media screen and (min-width: $medium-breakpoint) {
+              padding-left: 20px;
+            }
+
+            margin: 0;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
     }
+  }
+
+  #body-content {
+    // border: 2px solid $debug-color-1;
+
+    @include structure();
+
+    min-height: 600px;
+    margin: 0 auto;
+
+    font-family: serif;
+  }
+
+  footer {
+    background-color: black;
+    #footer-content {
+      // border: 2px solid $debug-color-1;
+
+      display: flex;
+      @include structure();
+
+      #footer-logo {
+        margin-right: 20px;
+      }
+    }
+  }
 }
