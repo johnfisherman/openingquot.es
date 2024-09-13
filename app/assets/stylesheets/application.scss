@@ -56,6 +56,10 @@ body {
         svg {
           width: 70px;
           height: 70px;
+          &:hover {
+            transition: all ease-in-out 0.1s;
+            transform: translateY(4px);
+          }
         }
       }
 
