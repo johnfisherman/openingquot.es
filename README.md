@@ -1,4 +1,6 @@
-# openingquotes.com (working title)
+# openingquot.es
+
+[openingquot.es](https://openingquot.es)
 
 _Unearthing mankind's best quotes, one epigraph at a time_
 
