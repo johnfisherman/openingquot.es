@@ -33,6 +33,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  // text-decoration-color: black;
+  color: black;
+}
+
 body {
   header {
     background-color: black;
@@ -120,23 +125,36 @@ body {
   footer {
     background-color: black;
     #footer-content {
-      // border: 2px solid $debug-color-1;
-
       display: flex;
+      align-items: baseline;
       @include structure();
 
       #footer-logo {
         margin-right: 20px;
+        svg {
+          width: 70px;
+          height: 70px;
+          &:hover {
+            transition: all ease-in-out 0.1s;
+            transform: translateY(3px);
+          }
+        }
+      }
+
+      a {
+        text-decoration-color: $medium-gray;
+        color: $medium-gray;
       }
     }
   }
 }
 
+// Quotes#show
 p.quote-body {
   display: inline;
+  font-family: Cochin, Cambria, Georgia, Times, "Times New Roman", serif;
 }
 
-// Quotes#show
 #see-more-quotes {
   margin-top: 80px;
 }
