@@ -14,6 +14,8 @@ that these selected quotes will necessarily be the crème de la crème of the wo
 
 This website / webapp will be a repository for those epigraphs. Send your own favorites.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K113D3DM)
+
 ## Running the project
 
 ### Install Postgres
