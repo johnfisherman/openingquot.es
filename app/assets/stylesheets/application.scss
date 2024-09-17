@@ -161,9 +161,16 @@ body {
       #kofi-button-footer {
         margin-top: 20px;
         padding: 0 20px;
-        max-width: 250px;
       }
     }
+  }
+}
+
+.kofi-button {
+  max-width: 250px;
+  &:hover {
+    transition: all ease-in-out 0.1s;
+    transform: scale(1.1);
   }
 }
 
