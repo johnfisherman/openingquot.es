@@ -1,0 +1,23 @@
+<h1>Add quote</h1>
+
+<%= form_with model: @quote do |form| %>
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+    <% @quote.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.select :book_id, options_from_collection_for_select(Book.all, 'id', 'title') %>
+  </div>
+
+  <div>
+    <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'name') %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
