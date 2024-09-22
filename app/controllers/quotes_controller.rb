@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
     def new
       @quote = Quote.new
     end
-  
+
     def create
       @quote = Quote.new(quote_params)
       # Create a slug for book
@@ -14,6 +14,20 @@ class QuotesController < ApplicationController
         redirect_to @quote
       else
         render :new, status: :unprocessable_entity
+      end
+    end
+
+    def edit
+      @quote = Quote.find_by(slug: params[:id])
+    end
+
+    def update
+      @quote = Quote.find_by(slug: params[:id])
+
+      if @quote.update(quote_params)
+        redirect_to @quote
+      else
+        render :edit, status: :unprocessable_entity
       end
     end
 
@@ -37,5 +51,4 @@ class QuotesController < ApplicationController
     def quote_params
         params.require(:quote).permit(:book_id, :body, :author_id)
     end
-    
 end
