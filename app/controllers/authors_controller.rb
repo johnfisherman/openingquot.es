@@ -4,7 +4,7 @@ class AuthorsController < ApplicationController
     def new
       @author = Author.new
     end
-    
+
     def create
       @author = Author.new(author_params)
       # Create a slug for author
@@ -14,6 +14,20 @@ class AuthorsController < ApplicationController
           redirect_to @author
       else
           render :new, status: :unprocessable_entity
+      end
+    end
+
+    def edit
+      @author = Author.find_by(slug: params[:id])
+    end
+
+    def update
+      @author = Author.find_by(slug: params[:id])
+
+      if @author.update(author_params)
+        redirect_to @author
+      else
+        render :edit, status: :unprocessable_entity
       end
     end
 
