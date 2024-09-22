@@ -1,5 +1,5 @@
 <h1>Opening Quotes</h1>
-<p>This is a collection of quotes that authors choose to open their books, aka epigraphs.</p>
+<p>This is a collection of quotes that authors choose to open their books with, aka epigraphs. </p>
 
 <ul>
   <% @quotes.each do |quote| %>
@@ -8,3 +8,5 @@
     </li>
   <% end %>
 </ul>
+
+<p>Currently there are <%= @quotes.length %> epigraphs. The list is ever-growing, so make sure you keep coming back.
