@@ -160,7 +160,7 @@ body {
 
       p {
         padding: 0 20px;
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
 
       #kofi-button-footer {
@@ -191,7 +191,6 @@ p.quote-body {
 
 // /about
 #about-whats-an-epigraph {
-  
   display: flex;
   flex: 1 1;
   flex-direction: column;
@@ -201,7 +200,7 @@ p.quote-body {
   @media screen and (min-width: $medium-breakpoint) {
     flex-direction: row;
     margin: 80px 0 40px 0;
-    
+
     & > div {
       width: 50%;
     }
