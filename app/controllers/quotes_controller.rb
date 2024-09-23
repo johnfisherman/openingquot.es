@@ -40,11 +40,11 @@ class QuotesController < ApplicationController
     # The quote
     @quote = Quote.find_by(slug: params[:id])
     # The person that put it down
-    @quote_author = Author.find(@quote.author_id)
+    @quote_author = @quote.author
     # The book where it features
-    @parent_book = Book.find(@quote.book_id)
+    @parent_book = @quote.book
     # The writer that decided to quote that other author, and that has written the book with this epigraph
-    @parent_book_author = Author.find(@parent_book.author_id)
+    @parent_book_author = @parent_book.author
   end
 
   # Like strong type, but for form parameters

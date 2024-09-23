@@ -38,9 +38,9 @@ class AuthorsController < ApplicationController
   def show
     # Retrieve author based on slug
     @author = Author.find_by(slug: params[:id])
-    @author_books = Book.where(author_id: @author.id)
+    @author_books = @author.books
     @quotes = Quote.all
-    @quoted_quotes = @quotes.where(author_id: @author.id)
+    @quoted_quotes = @author.quotes
   end
 
   def author_params
