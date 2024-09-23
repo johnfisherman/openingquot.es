@@ -5,7 +5,7 @@ class Quote < ApplicationRecord
   end
 
   belongs_to :book
-  has_many :authors
+  belongs_to :author, optional: true
 
   validates :body, presence: true
 

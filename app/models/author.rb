@@ -4,7 +4,7 @@ class Author < ApplicationRecord
     self.slug
   end
 
-  belongs_to :quote, optional: true
+  has_many :quotes
 
   validates :name, presence: true
   # validates :slug, presence: true
