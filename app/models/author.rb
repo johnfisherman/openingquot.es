@@ -5,6 +5,7 @@ class Author < ApplicationRecord
   end
 
   has_many :quotes
+  has_many :books
 
   validates :name, presence: true
   # validates :slug, presence: true
