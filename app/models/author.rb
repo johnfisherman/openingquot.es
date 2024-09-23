@@ -1,5 +1,5 @@
 class Author < ApplicationRecord
-  # Keep using helper link_to, seaminglessly
+  # Keep using helper link_to, seamlessly
   def to_param
     self.slug
   end

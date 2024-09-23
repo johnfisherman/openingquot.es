@@ -11,9 +11,9 @@
 include Slugs
 
 # Populate Authors
-[ "Ernest Hemingway", "Gertrude Stein", "Hunter S. Thompson", "Samuel Johnson", "Ray Bradbury", "Juan Ramón Jiménez", "Arundathi Roy", "John Berger", "Justin Torres", "Plato", "Vladimir Nabokov", "James Boswell", "Chang-rae Lee", "Thomas Mann", "Graham Greene", "James Hardy", "Dawn O'Porter" ].each do |author_name|
-    # Author.find_or_create_by!(name: author_name)
-    Author.find_or_create_by!(name: author_name, slug: create_slug(author_name))
+["Ernest Hemingway", "Gertrude Stein", "Hunter S. Thompson", "Samuel Johnson", "Ray Bradbury", "Juan Ramón Jiménez", "Arundathi Roy", "John Berger", "Justin Torres", "Plato", "Vladimir Nabokov", "James Boswell", "Chang-rae Lee", "Thomas Mann", "Graham Greene", "James Hardy", "Dawn O'Porter"].each do |author_name|
+  # Author.find_or_create_by!(name: author_name)
+  Author.find_or_create_by!(name: author_name, slug: create_slug(author_name))
 end
 
 # Populate Books

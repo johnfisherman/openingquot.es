@@ -1,5 +1,5 @@
 class Quote < ApplicationRecord
-  # Keep using helper link_to, seaminglessly
+  # Keep using helper link_to, seamlessly
   def to_param
     self.slug
   end
@@ -12,5 +12,4 @@ class Quote < ApplicationRecord
   def quote_author
     Author.find_by(id: self.author_id)
   end
-
 end
