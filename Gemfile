@@ -35,6 +35,8 @@ gem "bootsnap", require: false
 # Render requires Postgres
 gem "pg"
 
+gem "sitemap_generator"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -60,4 +62,4 @@ group :test do
 end
 
 gem "dartsass-rails", "~> 0.5.1"
-gem 'pgreset'
+gem "pgreset"

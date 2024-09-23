@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  # get "site/home", 
+  # get "site/home",
   get "about", to: "site#about"
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :books
   resources :authors
   resources :quotes
+
+  # Sitemap using sitemap_generator gem
+  # get "/sitemap.xml", to: "sitemap#index", defaults: { format: "xml" }
 
   get "up" => "rails/health#show", as: :rails_health_check
 
