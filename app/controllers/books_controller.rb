@@ -37,10 +37,10 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(slug: params[:id])
-    @author = Author.find(@book.author_id)
-    @quote = Quote.find_by(book_id: @book.id)
+    @author = @book.author
+    @quote = @book.quotes.first
     if @book.has_quote?
-      @quote_author = Author.find(@quote.author_id)
+      @quote_author = @quote.author
     end
   end
 
