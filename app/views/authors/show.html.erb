@@ -1,7 +1,7 @@
 <h1><%= @author.name %></h1>
 
 <% unless @author_books.length <= 0 %>
-    <h2>We have <%= @author_books.length %> books written by this person containing epigraphs.</h2>
+    <h2>We have <%= @author_books.length.to_s + " " + "book".pluralize(@author_books.length) %> written by this person containing epigraphs.</h2>
 <% end %>
 
 <ul>
@@ -13,10 +13,12 @@
 </ul>
 
 <% unless @quoted_quotes.length <= 0 %>
-    <h2>This author was quoted <%= @quoted_quotes.length %> times in epigraphs.</h2>
-    <% @quoted_quotes.each do |quote| %>
-        <li>
-            <%= link_to quote.body, quote %>
-        </li>
-    <% end %>
+    <h2>This author was quoted <%= @quoted_quotes.length.to_s + " " + "time".pluralize(@quoted_quotes.length) %> in epigraphs.</h2>
+    <ul>
+        <% @quoted_quotes.each do |quote| %>
+            <li>
+                <%= link_to quote.body, quote %>
+            </li>
+        <% end %>
+    </ul>
 <% end %>
