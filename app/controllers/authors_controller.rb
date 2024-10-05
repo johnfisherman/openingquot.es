@@ -8,7 +8,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     # Create a slug for author
-    @author.slug = create_slug(@author.name)
+    @author.slug = create_slug(@author.first_name)
 
     if @author.save
       redirect_to @author
@@ -44,6 +44,6 @@ class AuthorsController < ApplicationController
   end
 
   def author_params
-    params.require(:author).permit(:name, :slug)
+    params.require(:author).permit(:first_name, :slug)
   end
 end

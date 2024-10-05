@@ -24,7 +24,7 @@
   </div>  
 
   <div>
-    <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'name') %>
+    <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'first_name') %>
     <% ## form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'name'), { selected: (book.author_id) } %>
 
   </div>

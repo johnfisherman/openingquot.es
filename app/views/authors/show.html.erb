@@ -1,4 +1,4 @@
-<h1><%= @author.name %></h1>
+<h1><%= @author.first_name %></h1>
 
 <% unless @author_books.length <= 0 %>
     <h2>We have <%= @author_books.length.to_s + " " + "book".pluralize(@author_books.length) %> written by this person containing epigraphs.</h2>

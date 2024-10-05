@@ -1,8 +1,8 @@
 <%= form_with model: author do |form| %>
   <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-    <% author.errors.full_messages_for(:name).each do |message| %>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% author.errors.full_messages_for(:first_name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

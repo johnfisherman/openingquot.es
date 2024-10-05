@@ -1,4 +1,4 @@
 <h1>"<%= simple_format(@quote.body, class: 'quote-body', wrapper_tag: "div") %>"</h1>
-<p>– <%= link_to @quote_author.name, @quote_author %>
-<p>Epigraph that opens the book "<%= link_to @parent_book.title, @parent_book %>" by <%= link_to @parent_book_author.name, @parent_book_author %>.</p>
+<p>– <%= link_to @quote_author.first_name, @quote_author %>
+<p>Epigraph that opens the book "<%= link_to @parent_book.title, @parent_book %>" by <%= link_to @parent_book_author.first_name, @parent_book_author %>.</p>
 <p id="see-more-quotes"><%= link_to "See more quotes", "/quotes" %></p>
