@@ -81,6 +81,9 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.2.1)
       racc
+    brick (1.0.218)
+      activerecord (>= 3.1.1)
+      fancy_gets
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -103,6 +106,7 @@ GEM
       reline (>= 0.3.8)
     drb (2.2.1)
     erubi (1.13.0)
+    fancy_gets (0.1.10)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (4.28.0)
@@ -353,6 +357,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  brick
   capybara
   dartsass-rails (~> 0.5.1)
   debug

@@ -38,10 +38,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find_by(slug: params[:id])
     @author = @book.author
-    @quote = @book.quotes.first
-    if @book.has_quote?
-      @quote_author = @quote.author
-    end
+    @quotes = @book.quotes
   end
 
   # Like strong type, but for form parameters
