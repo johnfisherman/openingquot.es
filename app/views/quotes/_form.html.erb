@@ -16,7 +16,7 @@
   <h4>Author of this epigraph</h4>
 
   <div>
-    <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'first_name') %>
+    <%= form.select :author_id, options_from_collection_for_select(Author.all, 'id', 'last_name') %>
   </div>
 
   <div>
