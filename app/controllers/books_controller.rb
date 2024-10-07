@@ -32,7 +32,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @books = Book.order(:title)
   end
 
   def show
