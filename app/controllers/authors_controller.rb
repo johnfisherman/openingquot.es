@@ -32,7 +32,8 @@ class AuthorsController < ApplicationController
   end
 
   def index
-    @authors = Author.all
+    # Group authors by first letter of last name
+    @initials = Author.order(:last_name).group_by{|u| u.last_name[0]}
   end
 
   def show
