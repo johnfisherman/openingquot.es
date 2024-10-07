@@ -1,10 +1,10 @@
 <h1>Opening Quotes</h1>
 <p>This is a collection of quotes that authors choose to open their books with, aka epigraphs. </p>
 
-<ul>
+<ul class="quote-list">
   <% @quotes.each do |quote| %>
     <li>
-      "<%= link_to quote.body, quote %>" — <%= "#{quote.quote_author.first_name} #{quote.quote_author.last_name}" %>
+      "<%= link_to quote.body, quote %>" — <span class="quote-author"><%= "#{quote.quote_author.first_name} #{quote.quote_author.last_name}" %></span>
     </li>
   <% end %>
 </ul>
