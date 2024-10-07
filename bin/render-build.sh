@@ -8,7 +8,8 @@ bundle exec rake dartsass:build
 bundle exec rake assets:clean
 # generate sitemap
 bundle exec rake sitemap:refresh
-bundle exec rake db:migrate 
+bundle exec rake db:migrate
+bundle exec rake lastname:run
 
 # bundle exec rake RAILS_ENV=production db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
 # bundle exec rake db:create db:migrate db:seed
