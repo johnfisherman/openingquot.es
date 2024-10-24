@@ -81,7 +81,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.2.1)
       racc
-    brick (1.0.218)
+    brick (1.0.220)
       activerecord (>= 3.1.1)
       fancy_gets
     builder (3.3.0)
@@ -127,7 +127,7 @@ GEM
     google-protobuf (4.28.0-x86_64-linux)
       bigdecimal
       rake (>= 13)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
       actionpack (>= 6.0.0)
