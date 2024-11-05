@@ -8,7 +8,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     # Create a slug for author
-    @author.slug = create_slug(@author.first_name)
+    @author.slug = create_slug(@author.first_name + " " + @author.last_name)
 
     if @author.save
       redirect_to @author
@@ -33,7 +33,7 @@ class AuthorsController < ApplicationController
 
   def index
     # Group authors by first letter of last name
-    @initials = Author.order(:last_name).group_by{|u| u.last_name[0]}
+    @initials = Author.order(:last_name).group_by { |u| u.last_name[0] }
   end
 
   def show
