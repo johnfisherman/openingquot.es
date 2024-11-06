@@ -280,6 +280,7 @@ p.quote-body {
   @media screen and (min-width: $medium-breakpoint) {
     flex-direction: row;
     margin: 80px 0 40px 0;
+    padding-right: 20px;
 
     & > div {
       width: 50%;
