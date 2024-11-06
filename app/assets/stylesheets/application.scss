@@ -270,6 +270,13 @@ p.quote-body {
   align-items: center;
   margin: 40px 0 40px 0;
 
+  h2 {
+    margin-bottom: 40px;
+    a {
+      color: $oq-text-color;
+    }
+  }
+
   @media screen and (min-width: $medium-breakpoint) {
     flex-direction: row;
     margin: 80px 0 40px 0;
@@ -278,14 +285,13 @@ p.quote-body {
       width: 50%;
     }
 
+    h2 {
+      margin-bottom: 0px;
+    }
+
     img {
       border-radius: 2px;
-    }
-  }
-
-  h2 {
-    a {
-      color: $oq-text-color;
+      max-width: 300px;
     }
   }
 }
