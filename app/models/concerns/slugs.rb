@@ -1,7 +1,6 @@
 module Slugs
   extend ActiveSupport::Concern
 
-  #
   def create_slug(name)
     name.downcase.strip.gsub(" ", "-").gsub(/[^\w-]/, "")
   end

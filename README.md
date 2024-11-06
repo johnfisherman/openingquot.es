@@ -16,7 +16,9 @@ This website / webapp will be a repository for those epigraphs. Send your own fa
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K113D3DM)
 
-Thanks to [Giacomo Miceli](https://jamez.it) for reminding me this was a worthwhile pursuit, Madalena Marques for the constant inspiration and out-of-the-box thinking, and Christina Casnellie for the work residency in London, with the best food in town and a steady stream of priceless epigraphs. 
+Thanks to [Giacomo Miceli](https://jamez.it) for reminding me this was a worthwhile pursuit, Madalena Marques for the constant inspiration and out-of-the-box thinking, and Christina Casnellie for the work residency in London, with the best food in town and a steady stream of priceless epigraphs.
+
+Book covers are being fetched from [Literal.club](https://iteral.club)'s API. Thank you, guys!
 
 ## Running the project
 

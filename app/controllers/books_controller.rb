@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   include Slugs
+  include Fetchbookdata
 
   def new
     @book = Book.new
@@ -39,6 +40,9 @@ class BooksController < ApplicationController
     @book = Book.find_by(slug: params[:id])
     @author = @book.author
     @quotes = @book.quotes
+    if (@book.isbn)
+      @book_cover = fetch_book_cover(@book.isbn)
+    end
   end
 
   # Like strong type, but for form parameters

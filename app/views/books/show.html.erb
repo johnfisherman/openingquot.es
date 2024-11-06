@@ -1,5 +1,12 @@
-<h1><%= @book.title %> (<%= @book.year %>)</h1>
-<h2><%= link_to "#{@author.first_name} #{@author.last_name}", @author %></h2>
+<div id="book-details">
+    <div>
+        <h1><%= @book.title %> (<%= @book.year %>)</h1>
+        <h2><%= link_to "#{@author.first_name} #{@author.last_name}", @author %></h2>
+    </div>
+    <% if @book_cover.present? %>
+        <img src="<%= @book_cover %>" alt="The cover of the book '<%= @book.title %>'">
+    <% end %>
+</div>
 <% if @book.has_quote? %>
     <br/>
     <p>This book opens with the <%= "epigraph".pluralize(@quotes.length) %>:
