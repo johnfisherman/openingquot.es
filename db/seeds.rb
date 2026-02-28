@@ -20,13 +20,14 @@ end
 # Populate Books
 Book.new(title: "The Sun Also Rises", year: 1988, author_id: 1, slug: create_slug("The Sun Also Rises"), isbn: 666).save
 Book.new(title: "Fear and Loathing in Las Vegas", year: 1971, author_id: 3, slug: create_slug("Fear and Loathing in Las Vegas"), isbn: 666).save
-Book.new(title: "Fahrenheit 451", year: 1953, author_id: 5, slug: create_slug("Fahrenheit 451"), isbn: 9789536184422).save
+Book.new(title: "Fahrenheit 451", year: 1953, author_id: 5, slug: create_slug("Fahrenheit 451"), isbn: 9781451673319).save
 Book.new(title: "The God of Small Things", year: 1997, author_id: 7, slug: create_slug("The God of Small Things"), isbn: 666).save
 Book.new(title: "We the Animals", year: 2011, author_id: 9, slug: create_slug("We the Animals"), isbn: 666).save
 Book.new(title: "Pale Fire", year: 1962, author_id: 11, slug: create_slug("Pale Fire"), isbn: 666).save
 Book.new(title: "My Year Abroad", year: 2021, author_id: 13, slug: create_slug("My Year Abroad"), isbn: 666).save
 Book.new(title: "The Comedians", year: 1966, author_id: 15, slug: create_slug("The Comedians"), isbn: 666).save
-Book.new(title: "So Lucky", year: 2020, author_id: 17, slug: create_slug("So Lucky"), isbn: 666).save
+Book.new(title: "So Lucky", year: 2020, author_id: 16, slug: create_slug("So Lucky"), isbn: 666).save
+Book.new(title: "Back from the Brink", year: 2018, author_id: 16, slug: create_slug("Back from the Brink"), isbn: 9781328476678).save
 
 # Populate Quotes
 quoteBody = "You are all a lost generation."
@@ -46,4 +47,6 @@ Quote.new(body: quoteBody, book_id: 7, author_id: 14, slug: create_slug(quoteBod
 quoteBody = "Aspects are within us\r\nand who seems\r\nMost kingly is the King."
 Quote.new(body: quoteBody, book_id: 8, author_id: 16, slug: create_slug(quoteBody.truncate_words(12))).save
 quoteBody = "Luck: Success or failure apparently brought by chance rather than through one's own actions."
-Quote.new(body: quoteBody, book_id: 9, author_id: 17, slug: create_slug(quoteBody.truncate_words(12))).save
+Quote.new(body: quoteBody, book_id: 9, author_id: 16, slug: create_slug(quoteBody.truncate_words(12))).save
+quoteBody = "Aesthetic master cleanse synth dolore coloring book lyft hot chicken, do pabst gochujang gatekeep kogi lomo."
+Quote.new(body: quoteBody, book_id: 10, author_id: 16, slug: create_slug(quoteBody.truncate_words(12))).save

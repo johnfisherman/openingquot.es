@@ -35,8 +35,10 @@ module Fetchbookdata
 
       if parsed_response["ISBN:#{isbn13}"]
         thumbnail_url_small = parsed_response["ISBN:#{isbn13}"]["thumbnail_url"]
-        thumbnail_url_medium = thumbnail_url_small.gsub! '-S', '-L'
-        return thumbnail_url_medium
+        if thumbnail_url_small
+          thumbnail_url_medium = thumbnail_url_small.gsub! '-S', '-L'
+          return thumbnail_url_medium
+        end
       end
 
     end
