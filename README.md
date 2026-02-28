@@ -24,13 +24,21 @@ Book covers are being fetched from [Literal.club](https://iteral.club)'s API. Th
 
 ### Install Postgres
 
-### on Ubuntu
+#### on Ubuntu
 
 `sudo apt update`
 `sudo apt install postgresql postgresql-contrib libpq-dev`
 `sudo -u postgres createuser -s <your-username> -P`
 
 `bundle install`
+
+### Create DB
+
+`bin/rails db:create`
+
+### Run migrations
+
+`bin/rails db:migrate`
 
 ### macos, using homebrew
 

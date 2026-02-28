@@ -20,7 +20,7 @@ end
 # Populate Books
 Book.new(title: "The Sun Also Rises", year: 1988, author_id: 1, slug: create_slug("The Sun Also Rises"), isbn: 666).save
 Book.new(title: "Fear and Loathing in Las Vegas", year: 1971, author_id: 3, slug: create_slug("Fear and Loathing in Las Vegas"), isbn: 666).save
-Book.new(title: "Fahrenheit 451", year: 1953, author_id: 5, slug: create_slug("Fahrenheit 451"), isbn: 666).save
+Book.new(title: "Fahrenheit 451", year: 1953, author_id: 5, slug: create_slug("Fahrenheit 451"), isbn: 9789536184422).save
 Book.new(title: "The God of Small Things", year: 1997, author_id: 7, slug: create_slug("The God of Small Things"), isbn: 666).save
 Book.new(title: "We the Animals", year: 2011, author_id: 9, slug: create_slug("We the Animals"), isbn: 666).save
 Book.new(title: "Pale Fire", year: 1962, author_id: 11, slug: create_slug("Pale Fire"), isbn: 666).save

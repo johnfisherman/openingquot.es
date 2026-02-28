@@ -8,23 +8,37 @@ module Fetchbookdata
   require 'json'
   
   def fetch_book_cover(isbn13)
-    url = URI("https://literal.club/graphql/")
+    url = URI("https://openlibrary.org/api/books")
+
+    parameters = { :bibkeys => "ISBN:#{isbn13}", :format => "json" }
+
+    url.query = URI.encode_www_form(parameters)
 
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     
-    request = Net::HTTP::Post.new(url)
+    request = Net::HTTP::Get.new(url)
     request["Content-Type"] = 'application/json'
     request["User-Agent"] = 'insomnia/10.1.1'
-    request.body = "{\n  \"query\": \"query GetBookByIsbn($isbn13: String!) {\\n  book(where: {isbn13: $isbn13}) {\\n    cover\\n  }\\n}\\n\\n\",\n  \"operationName\": \"GetBookByIsbn\",\n  \"variables\": {\n    \"isbn13\": \"#{isbn13}\"\n  }\n}"
 
     response = http.request(request)
-    parsed_response = JSON.parse(response.read_body)
 
-    if parsed_response["data"]["book"]
-      return parsed_response["data"]["book"]["cover"]
+    # logger.debug "Response from API:"
+    # logger.debug response.read_body
+
+    logger.debug "Response Code:"
+    logger.debug response.code
+
+    if response.code === "200"
+      parsed_response = JSON.parse(response.read_body)
+
+      if parsed_response["ISBN:#{isbn13}"]
+        thumbnail_url_small = parsed_response["ISBN:#{isbn13}"]["thumbnail_url"]
+        thumbnail_url_medium = thumbnail_url_small.gsub! '-S', '-L'
+        return thumbnail_url_medium
+      end
+
     end
-
   end
 end
